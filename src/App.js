@@ -1,6 +1,13 @@
 import React from 'react';
 import logo from './kodflix-logo.png';
 import './App.css';
+import './reset.css';
+import batmanCover from './batman.jpg';
+import avatarCover from './avatar.jpg';
+import johnnyMnemonicCover from './johnnymnemonic.jpg';
+import matrixCover from './matrix.jpg';
+import thewalkingdeadCover from './thewalkingdead.jpg';
+import gameofthronesCover from './gameofthrones.jpg';
 
 
 function App() {
@@ -8,14 +15,14 @@ function App() {
     <div className="App">
       <img alt="kodflix logo" className="logo" src={logo} />
       <div className="container">
-        <div className="movieCover">Batman</div>
-        <div className="movieCover">Avatar</div>
-        <div className="movieCover">Johnny Mnemonic</div>
+        <div className="movieCover"><img src={batmanCover} /></div>
+        <div className="movieCover"><img src={avatarCover} /></div>
+        <div className="movieCover"><img src={johnnyMnemonicCover} /></div>
       </div>
       <div className="container">
-        <div className="movieCover">Matrix</div>
-        <div className="movieCover">The Walking Dead</div>
-        <div className="movieCover">Game of Thrones</div>
+        <div className="movieCover"><img src={matrixCover} /></div>
+        <div className="movieCover"><img src={thewalkingdeadCover} /></div>
+        <div className="movieCover"><img src={gameofthronesCover} /></div>
       </div>
     </div>
   );

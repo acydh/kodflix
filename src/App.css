@@ -1,7 +1,6 @@
 .App {
   min-height: 100vh;
   text-align: center;
-  /* background-color: black; */
 }
 
 .logo {
@@ -10,9 +9,12 @@
 
 .container {
   display: flex;
-  justify-content: center;
 }
 
 .movieCover {
-  width: 25%;
+  flex: 1;
+}
+
+.movieCover img {
+  width: 100%;
 }
