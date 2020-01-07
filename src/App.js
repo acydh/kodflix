@@ -15,14 +15,26 @@ function App() {
     <div className="App">
       <img alt="kodflix logo" className="logo" src={logo} />
       <div className="container">
-        <div className="movieCover"><img src={batmanCover} alt="batman cover" /></div>
-        <div className="movieCover"><img src={avatarCover} alt="avatar cover" /></div>
-        <div className="movieCover"><img src={johnnyMnemonicCover} alt="johnny mnemonic cover" /></div>
+        <div className="movieCover"><img src={batmanCover} alt="batman cover" />
+          <div className="textOverlay"><span>Batman</span></div>
+        </div>
+        <div className="movieCover"><img src={avatarCover} alt="avatar cover" />
+          <div className="textOverlay"><span>Avatar</span></div>
+        </div>
+        <div className="movieCover"><img src={johnnyMnemonicCover} alt="jonnymnemonic cover" />
+          <div className="textOverlay"><span>Johnny Mnemonic</span></div>
+        </div>
       </div>
       <div className="container">
-        <div className="movieCover"><img src={matrixCover} alt="matrix cover" /></div>
-        <div className="movieCover"><img src={thewalkingdeadCover} alt="the walking dead cover" /></div>
-        <div className="movieCover"><img src={gameofthronesCover} alt="game of thrones cover" /></div>
+        <div className="movieCover"><img src={matrixCover} alt="matrix cover" />
+          <div className="textOverlay"><span>Matrix</span></div>
+        </div>
+        <div className="movieCover"><img src={thewalkingdeadCover} alt="the walking dead cover" />
+          <div className="textOverlay"><span>The Walking Dead</span></div>
+        </div>
+        <div className="movieCover"><img src={gameofthronesCover} alt="game of thrones cover" />
+          <div className="textOverlay"><span>Game of Thrones</span></div>
+        </div>
       </div>
     </div>
   );

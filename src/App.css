@@ -12,6 +12,7 @@
 }
 
 .movieCover {
+  position: relative;
   flex: 1;
 }
 
@@ -19,9 +20,28 @@
   width: 100%;
 }
 
+.textOverlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  vertical-align: middle;
+  height: 10%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
-@media only screen and (max-width: 600px) {
-  
+.textOverlay span {
+  margin: 0 auto;
+  font-size: 25px;
+  color: white;
+}
+
+
+
+@media only screen and (max-width: 600px) { 
+
   .container {
     display: block;
   }
