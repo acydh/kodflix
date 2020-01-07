@@ -22,20 +22,24 @@
 
 .textOverlay {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  opacity: 0;
+  text-align: center;
+  bottom: 0;
   width: 100%;
   vertical-align: middle;
-  height: 10%;
-  bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  padding:20px 0;
 }
 
 .textOverlay span {
-  margin: 0 auto;
   font-size: 25px;
   color: white;
+}
+
+.movieCover:hover .textOverlay {
+  opacity: 1;
 }
 
 
