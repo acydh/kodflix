@@ -9,32 +9,28 @@ import matrixCover from './matrix.jpg';
 import thewalkingdeadCover from './thewalkingdead.jpg';
 import gameofthronesCover from './gameofthrones.jpg';
 
+function TvShow(props) {
+  return (
+    <div className="movieCover"><img src={props.coverImg} alt={props.title} />
+        <div className="textOverlay"><span>{props.title}</span></div>
+    </div>
+  )
+}
+
 
 function App() {
   return (
     <div className="App">
       <img alt="kodflix logo" className="logo" src={logo} />
       <div className="container">
-        <div className="movieCover"><img src={batmanCover} alt="batman cover" />
-          <div className="textOverlay"><span>Batman</span></div>
-        </div>
-        <div className="movieCover"><img src={avatarCover} alt="avatar cover" />
-          <div className="textOverlay"><span>Avatar</span></div>
-        </div>
-        <div className="movieCover"><img src={johnnyMnemonicCover} alt="jonnymnemonic cover" />
-          <div className="textOverlay"><span>Johnny Mnemonic</span></div>
-        </div>
-      </div>
+        <TvShow coverImg = {batmanCover} title = "Batman"  />
+        <TvShow coverImg = {avatarCover} title = "Avatar"  />
+        <TvShow coverImg = {johnnyMnemonicCover} title = "Johnny Mnemonic"  />  
+      </div>      
       <div className="container">
-        <div className="movieCover"><img src={matrixCover} alt="matrix cover" />
-          <div className="textOverlay"><span>Matrix</span></div>
-        </div>
-        <div className="movieCover"><img src={thewalkingdeadCover} alt="the walking dead cover" />
-          <div className="textOverlay"><span>The Walking Dead</span></div>
-        </div>
-        <div className="movieCover"><img src={gameofthronesCover} alt="game of thrones cover" />
-          <div className="textOverlay"><span>Game of Thrones</span></div>
-        </div>
+        <TvShow coverImg = {matrixCover} title = "Matrix"  />
+        <TvShow coverImg = {thewalkingdeadCover} title = "The Walking Dead"  />
+        <TvShow coverImg = {gameofthronesCover} title = "Game of Thrones"  />        
       </div>
     </div>
   );
