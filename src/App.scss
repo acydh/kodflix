@@ -15,12 +15,8 @@
 
 @media only screen and (max-width: 600px) {
 
-  .movieCover img {
-    width: 90%;
-  }
-
-  .textOverlay {
-    display: none; 
+  .container {
+    display: block;
   }
 
 }
