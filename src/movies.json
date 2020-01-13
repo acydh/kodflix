@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Batman",
+        "image": "batman.jpg",
+        "alt": "Batman"
+    },
+    {
+        "id": 2,
+        "title": "Avatar",
+        "image": "avatar.jpg",
+        "alt": "Avatar"
+    },
+    {
+        "id": 3,
+        "title": "Johnny Mnemonic",
+        "image": "johnnymnemonic.jpg",
+        "alt": "Johnny Mnemonic"
+    },
+    {
+        "id": 4,
+        "title": "Matrix",
+        "image": "matrix.jpg",
+        "alt": "Matrix"
+    },
+    {
+        "id": 5,
+        "title": "The Walking Dead",
+        "image": "thewalkingdead.jpg",
+        "alt": "The Walking Dead"
+    },
+    {
+        "id": 6,
+        "title": "Game of Thrones",
+        "image": "gameofthrones.jpg",
+        "alt": "Game of Thrones"
+    }
+]
