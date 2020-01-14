@@ -1,5 +1,4 @@
 .App {
-
   background-color: black;
   min-height: 100vh;
   text-align: center;
@@ -7,6 +6,7 @@
 
 .logo {
   margin-bottom: 50px;
+  width: 50%;
 }
 
 .container {
@@ -14,6 +14,11 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+  .logo {
+    margin-bottom: 50px;
+    width: 90%;
+  }
 
   .container {
     display: block;
