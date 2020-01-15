@@ -10,12 +10,12 @@ function Poster(props) {
     const MovieCover = styled.div`
         position: relative;
         overflow: hidden;
-        width: 25%;
+        flex-basis: 300px;
+        flex-grow: 1;
         @media (max-width: 600px) {
             text-align: center;
             margin-bottom: 25px;
             width: 100%;
-            display: block;
         }
     `;
 
@@ -23,7 +23,6 @@ function Poster(props) {
         width: 100%;
         display: block;
         @media (max-width: 600px) {
-            width: 75%;
             margin: 0 auto;
         }
     `;

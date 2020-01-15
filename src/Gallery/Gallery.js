@@ -9,6 +9,10 @@ function Gallery() {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: stretch;
+        @media (max-width: 600px) {
+            display: block;
+        }
     `;
 
     const posterArray = json_data.map(poster => {
