@@ -1,17 +1,22 @@
 import React from 'react';
 import Poster from '../Poster/Poster';
 import json_data from '../movies.json';
-import './Gallery.scss';
+import styled from 'styled-components';
 
 function Gallery() {
+
+    const Container = styled.div`
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    `;
 
     const posterArray = json_data.map(poster => {
         return <Poster coverImg={poster.image} title={poster.title} alt={poster.alt} />
     });
 
     return (
-        <div className="container">{posterArray}</div>
-
+        <Container>{posterArray}</Container>
     )
 }
 

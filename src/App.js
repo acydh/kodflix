@@ -1,16 +1,38 @@
 import React from 'react';
 import Gallery from './Gallery/Gallery';
 import logo from './kodflix-logo.png';
-import './App.scss';
+import styled from 'styled-components';
+
 
 function App() {
+
+  const StyledWrapper = styled.div`
+    background-color: black;
+    min-height: 100vh;
+    text-align: center;
+  `;
+
+  const StyledGallery = styled(Gallery)`
+    display: flex;
+    @media (max-width: 600px) {
+      display: block;
+    }
+  `;
+
+  const Logo = styled.img`
+    margin-bottom: 50px;
+    width: 50%;
+    @media (max-width: 600px) {
+      margin-bottom: 50px;
+      width: 90%;
+    }
+  `;
+
   return (
-    <div className="App">
-      <img alt="kodflix logo" className="logo" src={logo} />
-      <div className="container">
-        <Gallery className="container" />
-      </div>
-    </div>
+    <StyledWrapper>
+      <Logo alt="kodflix logo" src={logo} />
+      <StyledGallery />
+    </StyledWrapper>
   );
 }
 
