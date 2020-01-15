@@ -2,11 +2,17 @@ import React from 'react';
 import Gallery from './Gallery/Gallery';
 import logo from './kodflix-logo.png';
 import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 function App() {
 
-  const StyledWrapper = styled.div`
+  const Wrapper = styled.div`
     background-color: black;
     min-height: 100vh;
     text-align: center;
@@ -29,10 +35,12 @@ function App() {
   `;
 
   return (
-    <StyledWrapper>
-      <Logo alt="kodflix logo" src={logo} />
+    <Wrapper>
+      <Router>
+        <Link to="/"><Logo alt="kodflix logo" src={logo} /></Link>
+      </Router>
       <StyledGallery />
-    </StyledWrapper>
+    </Wrapper>
   );
 }
 

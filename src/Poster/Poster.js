@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+    BrowserRouter as Router,
+    Link
+} from "react-router-dom";
 
 function Poster(props) {
 
@@ -45,12 +49,21 @@ function Poster(props) {
     `;
 
 
-
+    const urlFriendly = title => {
+        return title
+            .split(' ')
+            .map(word => word.toLowerCase())
+            .join('-');
+    }
 
 
     return (
         <MovieCover className='movieCover'>
-            <CoverImage src={`${process.env.PUBLIC_URL}/assets/images/${props.coverImg}`} alt={props.title} />
+            <Router>
+                <Link to={urlFriendly(props.title)}>
+                    <CoverImage src={`${process.env.PUBLIC_URL}/assets/images/${props.coverImg}`} alt={props.title} />
+                </Link>
+            </Router>
             <TextOverlay>{props.title}</TextOverlay>
         </MovieCover>
     )
