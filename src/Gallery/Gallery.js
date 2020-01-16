@@ -16,7 +16,7 @@ function Gallery() {
     `;
 
     const posterArray = json_data.map(poster => {
-        return <Poster coverImg={poster.image} title={poster.title} alt={poster.alt} />
+        return <Poster coverImg={poster.image} title={poster.title} alt={poster.alt} key={poster.id} />
     });
 
     return (

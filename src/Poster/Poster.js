@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-    BrowserRouter as Router,
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Poster(props) {
 
@@ -58,11 +55,11 @@ function Poster(props) {
 
     return (
         <MovieCover className='movieCover'>
-            <Router>
-                <Link to={urlFriendly(props.title)}>
-                    <CoverImage src={`${process.env.PUBLIC_URL}/assets/images/${props.coverImg}`} alt={props.title} />
-                </Link>
-            </Router>
+
+            <Link to={`/details/${urlFriendly(props.title)}`}>
+                <CoverImage src={`${process.env.PUBLIC_URL}/assets/images/${props.coverImg}`} alt={props.title} />
+            </Link>
+
             <TextOverlay>{props.title}</TextOverlay>
         </MovieCover>
     )

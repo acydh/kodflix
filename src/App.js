@@ -1,9 +1,10 @@
 import React from 'react';
 import Gallery from './Gallery/Gallery';
+import MovieDetails from './MovieDetails/MovieDetails';
 import logo from './kodflix-logo.png';
 import styled from 'styled-components';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route,
   Link
@@ -16,6 +17,7 @@ function App() {
     background-color: black;
     min-height: 100vh;
     text-align: center;
+    color: white;
   `;
 
   const StyledGallery = styled(Gallery)`
@@ -36,10 +38,14 @@ function App() {
 
   return (
     <Wrapper>
-      <Router>
+      <BrowserRouter>
         <Link to="/"><Logo alt="kodflix logo" src={logo} /></Link>
-      </Router>
-      <StyledGallery />
+        <Switch>
+          <Route exact path="/" component={StyledGallery} />
+          <Route path="/details/:id" component={MovieDetails} />
+          <Route component={() => <h1>404</h1>}></Route>
+        </Switch>
+      </BrowserRouter>
     </Wrapper>
   );
 }
