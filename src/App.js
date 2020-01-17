@@ -1,6 +1,7 @@
 import React from 'react';
 import Gallery from './Gallery/Gallery';
 import MovieDetails from './MovieDetails/MovieDetails';
+import NotFound from './NotFound/NotFound';
 import logo from './kodflix-logo.png';
 import styled from 'styled-components';
 import {
@@ -20,13 +21,6 @@ function App() {
     color: white;
   `;
 
-  const StyledGallery = styled(Gallery)`
-    display: flex;
-    @media (max-width: 600px) {
-      display: block;
-    }
-  `;
-
   const Logo = styled.img`
     margin-bottom: 50px;
     width: 50%;
@@ -40,11 +34,14 @@ function App() {
     <Wrapper>
       <BrowserRouter>
         <Link to="/"><Logo alt="kodflix logo" src={logo} /></Link>
+
         <Switch>
-          <Route exact path="/" component={StyledGallery} />
+          <Route exact path="/" component={Gallery} />
+          <Route path="/404" component={NotFound} />
           <Route path="/details/:id" component={MovieDetails} />
-          <Route component={() => <h1>404</h1>}></Route>
+          <Route component={NotFound}></Route>
         </Switch>
+        
       </BrowserRouter>
     </Wrapper>
   );

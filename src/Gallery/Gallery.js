@@ -7,11 +7,13 @@ function Gallery() {
 
     const Container = styled.div`
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: stretch;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
         @media (max-width: 600px) {
-            display: block;
+            grid-template-columns: 1fr;
         }
     `;
 
