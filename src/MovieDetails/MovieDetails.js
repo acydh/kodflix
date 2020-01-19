@@ -9,18 +9,25 @@ import styled from 'styled-components';
 function MovieDetails() {
 
     const Wrapper = styled.div`
-        background-color: red;
+        
     `;
 
     const { id } = useParams();
 
-    let movie = movieList.find(movie => movie.slug === id);
+    let movie = movieList.find(movie => {
+        let title = id
+            .split('-')
+            .join(' ');
+        return title.toLowerCase() === movie.title.toLowerCase();
+    });
     const isValidTitle = movie ? true : false;
 
     return (
         isValidTitle ? (
             <Wrapper>
-                <h1>Details of {movie.title}</h1>
+                <h1>{movie.title}</h1>
+                <img src={`${process.env.PUBLIC_URL}/assets/images/${movie.image}`} alt={movie.title} />
+                <p>{movie.info}</p>
             </Wrapper>) : (
                 <NotFound />
             )

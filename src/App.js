@@ -17,16 +17,17 @@ function App() {
   const Wrapper = styled.div`
     background-color: black;
     min-height: 100vh;
-    text-align: center;
     color: white;
+    @media (max-width: 600px) {
+      text-align:center;
+    }
   `;
 
   const Logo = styled.img`
-    margin-bottom: 50px;
-    width: 50%;
+    margin: 25px auto;
+    width: 33%;
     @media (max-width: 600px) {
-      margin-bottom: 50px;
-      width: 90%;
+      width: 75%;
     }
   `;
 
@@ -41,7 +42,7 @@ function App() {
           <Route path="/details/:id" component={MovieDetails} />
           <Route component={NotFound}></Route>
         </Switch>
-        
+
       </BrowserRouter>
     </Wrapper>
   );

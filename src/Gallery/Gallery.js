@@ -8,9 +8,9 @@ function Gallery() {
     const Container = styled.div`
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        @media (max-width: 900px) {
-            grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
         }
         @media (max-width: 600px) {
             grid-template-columns: 1fr;
@@ -18,7 +18,7 @@ function Gallery() {
     `;
 
     const posterArray = json_data.map(poster => {
-        return <Poster coverImg={poster.image} title={poster.title} alt={poster.alt} key={poster.id} />
+        return <Poster coverImg={poster.image} title={poster.title} info={poster.info} alt={poster.alt} key={poster.id} />
     });
 
     return (

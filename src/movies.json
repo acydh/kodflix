@@ -1,44 +1,50 @@
 [
     {
         "id": 1,
-        "title": "Batman",
-        "slug" : "batman",
-        "image": "batman.jpg",
-        "alt": "Batman"
+        "title": "The Witcher",
+        "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "the-witcher.png"
     },
     {
         "id": 2,
-        "title": "Avatar",
-        "slug": "avatar",
-        "image": "avatar.jpg",
-        "alt": "Avatar"
+        "title": "The Umbrella Academy",
+        "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "the-umbrella-academy.png"
     },
     {
         "id": 3,
-        "title": "Johnny Mnemonic",
-        "slug": "johnny-mnemonic",
-        "image": "johnnymnemonic.jpg",
-        "alt": "Johnny Mnemonic"
+        "title": "South Park",
+        "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "south-park.png"
     },
     {
         "id": 4,
-        "title": "Matrix",
-        "slug": "matrix",
-        "image": "matrix.jpg",
-        "alt": "Matrix"
+        "title": "Breaking Bad",
+        "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "breaking-bad.png"
     },
     {
         "id": 5,
-        "title": "The Walking Dead",
-        "slug": "the-walking-dead",
-        "image": "thewalkingdead.jpg",
-        "alt": "The Walking Dead"
+        "title": "Bright",
+        "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "bright.png"
     },
     {
         "id": 6,
-        "title": "Game of Thrones",
-        "slug": "game-of-thrones",
-        "image": "gameofthrones.jpg",
-        "alt": "Game of Thrones"
+        "title": "Sabrina",
+        "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "sabrina.png"
+    },
+    {
+        "id": 7,
+        "title": "Sons of Anarchy",
+        "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "sons-of-anarchy.png"
+    },
+    {
+        "id": 8,
+        "title": "Big Mouth",
+        "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "image": "big-mouth.png"
     }
 ]
