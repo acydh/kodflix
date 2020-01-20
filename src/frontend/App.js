@@ -1,7 +1,6 @@
 import React from 'react';
 import Gallery from './Gallery/Gallery';
 import MovieDetails from './MovieDetails/MovieDetails';
-import Footer from './Footer/Footer';
 import NotFound from './NotFound/NotFound';
 import logo from './logo.png';
 import styled from 'styled-components';
@@ -43,12 +42,11 @@ function App() {
             <Route path="/details">
               <MovieDetails />
             </Route>
-            {/* <Route path="/details/:id" component={MovieDetails} /> */}
-            {/* <Route component={NotFound}></Route> */}
+            <Route path="/details/:id" component={MovieDetails} />
+            <Route component={NotFound}></Route>
           </Switch>
         </BrowserRouter>
       </Wrapper>
-      <Footer />
     </div>
   );
 }
