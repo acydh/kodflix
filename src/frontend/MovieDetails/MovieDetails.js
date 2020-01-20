@@ -12,7 +12,7 @@ function MovieDetails() {
     `;
 
     const { id } = useParams();
-
+    console.log(id);
     let movie = movieList.find(movie => {
         let title = id
             .split('-')
