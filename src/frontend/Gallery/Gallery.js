@@ -5,13 +5,13 @@ import styled from 'styled-components';
 
 function Gallery() {
 
-    const Container = styled.div`
+    const Wrapper = styled.div`
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        @media (max-width: 768px) {
+        grid-row-gap: 20px;
+        @media (max-width: 1024px) {
             grid-template-columns: 1fr 1fr;
-        }
         @media (max-width: 600px) {
             grid-template-columns: 1fr;
         }
@@ -22,7 +22,7 @@ function Gallery() {
     });
 
     return (
-        <Container>{posterArray}</Container>
+        <Wrapper>{posterArray}</Wrapper>
     )
 }
 
