@@ -1,37 +1,69 @@
-import React from 'react';
-import { useParams } from "react-router-dom";
-import movieList from '../movies.json';
-import NotFound from '../NotFound/NotFound';
+import React, { Component } from 'react';
+// import { useParams } from "react-router-dom";
+// import movieList from '../movies.json';
+//import NotFound from '../NotFound/NotFound';
 import styled from 'styled-components';
 
 
 
-function MovieDetails() {
+class MovieDetails extends Component {
 
-    const Wrapper = styled.div`
-        
-    `;
+    constructor() {
+        super();
+        this.state = {
+            message: 'Hello, this will be the details page for each Movie & TV show :)'
+        }
+    }
 
-    const { id } = useParams();
+    componentDidMount() {
+        setTimeout(() => this.setState({ message: 'Coming soon! :)' }), 3000);
+    }
 
-    let movie = movieList.find(movie => {
-        let title = id
-            .split('-')
-            .join(' ');
-        return title.toLowerCase() === movie.title.toLowerCase();
-    });
-    const isValidTitle = movie ? true : false;
+    render() {
 
-    return (
-        isValidTitle ? (
+        let { message } = this.state;
+
+        const Wrapper = styled.div`
+                color: white;
+            `;
+
+        return (
             <Wrapper>
-                <h1>{movie.title}</h1>
-                <img src={`${process.env.PUBLIC_URL}/assets/images/${movie.image}`} alt={movie.title} />
-                <p>{movie.info}</p>
-            </Wrapper>) : (
-                <NotFound />
-            )
-    )
+                <h1>{message}</h1>
+            </Wrapper>
+        )
+    }
 }
+
+
+//  ADVANCED VERSION BELOW, DO NOT CONSIDER FOR THE REVIEW
+
+// function MovieDetails() {
+
+//     const Wrapper = styled.div`
+
+//     `;
+
+//     const { id } = useParams();
+
+//     let movie = movieList.find(movie => {
+//         let title = id
+//             .split('-')
+//             .join(' ');
+//         return title.toLowerCase() === movie.title.toLowerCase();
+//     });
+//     const isValidTitle = movie ? true : false;
+
+//     return (
+//         isValidTitle ? (
+//             <Wrapper>
+//                 <h1>{movie.title}</h1>
+//                 <img src={`${process.env.PUBLIC_URL}/assets/images/${movie.image}`} alt={movie.title} />
+//                 <p>{movie.info}</p>
+//             </Wrapper>) : (
+//                 <NotFound />
+//             )
+//     )
+// }
 
 export default MovieDetails;
