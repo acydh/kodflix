@@ -2,7 +2,7 @@ import React from 'react';
 import Gallery from './Gallery/Gallery';
 import MovieDetails from './MovieDetails/MovieDetails';
 import NotFound from './NotFound/NotFound';
-import logo from './kodflix-logo.png';
+import logo from './logo.png';
 import styled from 'styled-components';
 import {
   BrowserRouter,
@@ -25,7 +25,7 @@ function App() {
 
   const Logo = styled.img`
     margin: 25px auto;
-    width: 33%;
+    width: 20%;
     @media (max-width: 600px) {
       width: 75%;
     }

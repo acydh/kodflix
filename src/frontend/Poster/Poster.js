@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Poster({ title, info, coverImg }) {
 
-    const MovieCover = styled.div`
+	const MovieCover = styled.div`
         position: relative;
         overflow: hidden;
         opacity: .99;
@@ -49,7 +49,7 @@ function Poster({ title, info, coverImg }) {
         }
     `;
 
-    const CoverImage = styled.img`
+	const CoverImage = styled.img`
         width: 100%;
         display: block;
         backface-visibility: hidden;
@@ -58,7 +58,7 @@ function Poster({ title, info, coverImg }) {
         }
     `;
 
-    const TextOverlay = styled.div`
+	const TextOverlay = styled.div`
         font-size: 16px;
 		padding: 20px;
 		color: #fff;
@@ -89,25 +89,25 @@ function Poster({ title, info, coverImg }) {
     `;
 
 
-    const urlFriendly = title => {
-        return title
-            .split(' ')
-            .map(word => word.toLowerCase())
-            .join('-');
-    }
+	const urlFriendly = title => {
+		return title
+			.split(' ')
+			.map(word => word.toLowerCase())
+			.join('-');
+	}
 
 
-    return (
-        <MovieCover className='movieCover'>
-            <Link to={`/details/${urlFriendly(title)}`}>
-                <CoverImage src={`${process.env.PUBLIC_URL}/assets/images/${coverImg}`} alt={title} />
-                <TextOverlay>
-                    <span className="title">{title}</span>
-                    <span className="info">{info}</span>
-                </TextOverlay>
-            </Link>
-        </MovieCover >
-    )
+	return (
+		<MovieCover className='movieCover'>
+			<Link to={`/details/${urlFriendly(title)}`}>
+				<CoverImage src={`${process.env.PUBLIC_URL}/assets/images/${coverImg}`} alt={title} />
+				<TextOverlay>
+					<span className="title">{title}</span>
+					<span className="info">{info}</span>
+				</TextOverlay>
+			</Link>
+		</MovieCover >
+	)
 }
 
 export default Poster;
