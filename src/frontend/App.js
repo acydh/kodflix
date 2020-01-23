@@ -15,7 +15,6 @@ import {
 function App() {
 
   const Wrapper = styled.div`
-    padding: 20px;
     min-height: 100vh;
     color: white;
     @media (max-width: 600px) {
@@ -24,8 +23,8 @@ function App() {
   `;
 
   const Logo = styled.img`
-    margin: 25px auto;
-    width: 15%;
+    margin: 20px 0;
+    width: 15%;x2x
     @media (max-width: 600px) {
       width: 50%;
     }
@@ -38,8 +37,8 @@ function App() {
           <Link to="/"><Logo alt="kodflix logo" src={logo} /></Link>
           <Switch>
             <Route exact path="/" component={Gallery} />
-            <Route path="/404" component={NotFound} />
             <Route path="/details/:id" component={MovieDetails} />
+            <Route path="/404" component={NotFound} />
             <Route component={NotFound}></Route>
           </Switch>
         </BrowserRouter>

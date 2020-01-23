@@ -1,0 +1,52 @@
+{
+    "shows": [
+        {
+            "id": 1,
+            "title": "The Witcher",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "the-witcher.png"
+        },
+        {
+            "id": 2,
+            "title": "The Umbrella Academy",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "the-umbrella-academy.png"
+        },
+        {
+            "id": 3,
+            "title": "Sons of Anarchy",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "sons-of-anarchy.png"
+        },
+        {
+            "id": 4,
+            "title": "Breaking Bad",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "breaking-bad.png"
+        },
+        {
+            "id": 5,
+            "title": "Bright",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "bright.png"
+        },
+        {
+            "id": 6,
+            "title": "Sabrina",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "sabrina.png"
+        },
+        {
+            "id": 7,
+            "title": "South Park",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "south-park.png"
+        },
+        {
+            "id": 8,
+            "title": "Big Mouth",
+            "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "big-mouth.png"
+        }
+    ]
+}
