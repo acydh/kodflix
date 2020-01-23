@@ -89,7 +89,7 @@ function Poster({ title, info, coverImg }) {
     `;
 
 
-	const urlFriendly = title => {
+	const toSlug = title => {
 		return title
 			.split(' ')
 			.map(word => word.toLowerCase())
@@ -99,7 +99,7 @@ function Poster({ title, info, coverImg }) {
 
 	return (
 		<MovieCover className='movieCover'>
-			<Link to={`/details/${urlFriendly(title)}`}>
+			<Link to={`/details/${toSlug(title)}`}>
 				<CoverImage src={`${process.env.PUBLIC_URL}/assets/images/${coverImg}`} alt={title} />
 				<TextOverlay>
 					<span className="title">{title}</span>

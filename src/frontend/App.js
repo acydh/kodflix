@@ -15,7 +15,7 @@ import {
 function App() {
 
   const Wrapper = styled.div`
-    min-height: 100vh;
+    height: 100%;
     color: white;
     @media (max-width: 600px) {
       text-align:center;
