@@ -38,7 +38,6 @@ function App() {
           <Switch>
             <Route exact path="/" component={Gallery} />
             <Route path="/details/:id" component={MovieDetails} />
-            <Route path="/404" component={NotFound} />
             <Route component={NotFound}></Route>
           </Switch>
         </BrowserRouter>

@@ -1,35 +1,48 @@
-import React from 'react';
-import { useParams } from "react-router-dom";
-import movieList from '../movies.json';
+import React, { Component } from 'react';
 import NotFound from '../NotFound/NotFound';
 import styled from 'styled-components';
+import Loader from '../Loading/Loading';
 
 
-function MovieDetails() {
+class MovieDetails extends Component {
 
-    const Wrapper = styled.div`
+    constructor() {
+        super();
+        this.state = { show: {} };
+    }
 
-    `;
+    componentDidMount() {
+        let showId = this.props.match.params.id;
+        console.log(showId);
+        fetch(`/rest/shows/${showId}`)
+            .then(response => response.json())
+            .then(show => this.setState({ show }));
+    }
 
-    const { id } = useParams();
-    let movie = movieList.find(movie => {
-        let title = id
-            .split('-')
-            .join(' ');
-        return title.toLowerCase() === movie.title.toLowerCase();
-    });
-    const isValidTitle = movie ? true : false;
+    render() {
 
-    return (
-        isValidTitle ? (
-            <Wrapper>
-                <h1>{movie.title}</h1>
-                <img src={`${process.env.PUBLIC_URL}/assets/images/${movie.image}`} alt={movie.title} />
-                <p>{movie.info}</p>
-            </Wrapper>) : (
-                <NotFound />
+        const Wrapper = styled.div`
+
+        `;
+
+        const show = this.state.show;
+        if (show) {
+            return show.title ?
+                <DetailsContent /> : <Loader />
+        } else {
+            return <NotFound />
+        }
+
+        function DetailsContent() {
+            return (
+                <Wrapper>
+                    <h1>{show.title}</h1>
+                    <img src={`${process.env.PUBLIC_URL}/assets/images/${show.image}`} alt={show.title} />
+                    <p>{show.info}</p>
+                </Wrapper>
             )
-    )
+        }
+    }
 }
 
 export default MovieDetails;

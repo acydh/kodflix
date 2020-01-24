@@ -15,7 +15,7 @@ class Gallery extends Component {
         fetch('/rest/shows/')
             .then(res => res.json())
             .then(data => {
-                return data.shows.map(poster => {
+                return data.map(poster => {
                     return <Poster coverImg={poster.image} title={poster.title} info={poster.info} alt={poster.alt} key={poster.id} />
                 })
             })
