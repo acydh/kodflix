@@ -13,16 +13,22 @@ class MovieDetails extends Component {
 
     componentDidMount() {
         let showId = this.props.match.params.id;
-        console.log(showId);
         fetch(`/rest/shows/${showId}`)
             .then(response => response.json())
-            .then(show => this.setState({ show }));
+            .then(show => {
+                setTimeout(() => this.setState({ show }), 1000);
+            });
     }
 
     render() {
 
         const Wrapper = styled.div`
 
+        `;
+
+        const ImageWrapper = styled.div`
+            width: 100%;
+            height: 200px;
         `;
 
         const show = this.state.show;
@@ -37,7 +43,9 @@ class MovieDetails extends Component {
             return (
                 <Wrapper>
                     <h1>{show.title}</h1>
-                    <img src={`${process.env.PUBLIC_URL}/assets/images/${show.image}`} alt={show.title} />
+                    <ImageWrapper>
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/${show.image}`} alt={show.title} />
+                    </ImageWrapper>
                     <p>{show.info}</p>
                 </Wrapper>
             )
