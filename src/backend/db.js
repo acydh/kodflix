@@ -1,5 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/";
+const url = process.env.NODE_ENV === 'production' ?
+    process.env.DB_URL_PRD :
+    process.env.DB_URL_DEV;
 
 function connect(dbName) {
     return new Promise((resolve, reject) => {
