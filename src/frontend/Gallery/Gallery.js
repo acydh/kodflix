@@ -40,7 +40,7 @@ class Gallery extends Component {
 
         return (
             <Wrapper>
-                {this.state.data};
+                {this.state.data}
             </Wrapper >
         )
     }

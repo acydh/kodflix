@@ -24,7 +24,7 @@ function App() {
 
   const Logo = styled.img`
     margin: 20px 0;
-    width: 15%;x2x
+    width: 15%;
     @media (max-width: 600px) {
       width: 50%;
     }
