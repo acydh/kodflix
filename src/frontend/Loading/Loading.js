@@ -21,8 +21,8 @@ function Loading() {
     return (
         <Wrapper>
             <div className="gears">
-                <img src={bigGear} alt="gear" class="big" />
-                <img src={smallGear} alt="gear" class="small" />
+                <img src={bigGear} alt="gear" className="big" />
+                <img src={smallGear} alt="gear" className="small" />
                 <h3>Loading...</h3>
             </div>
         </Wrapper>

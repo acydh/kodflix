@@ -8,23 +8,20 @@ class MovieDetails extends Component {
 
     constructor() {
         super();
-        this.state = { show: {} };
+        this.state = { "show": {}, "found": true };
     }
 
     componentDidMount() {
         let showId = this.props.match.params.id;
         fetch(`/rest/shows/${showId}`)
             .then(response => response.json())
-            .then(show => {
-                setTimeout(() => this.setState({ show }), 1000);
-            });
+            .then(show => setTimeout(() => this.setState({ show }), 500))
+            .catch(() => setTimeout(() => this.setState({ found: false }), 500));
     }
 
     render() {
 
-        const Wrapper = styled.div`
-
-        `;
+        const Wrapper = styled.div``;
 
         const ImageWrapper = styled.div`
             width: 100%;
@@ -32,7 +29,9 @@ class MovieDetails extends Component {
         `;
 
         const show = this.state.show;
-        if (show) {
+        const found = this.state.found;
+
+        if (found) {
             return show.title ?
                 <DetailsContent /> : <Loader />
         } else {
